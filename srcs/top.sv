@@ -8,7 +8,7 @@ module top
   , output logic       running
   , output logic       power_on
   , output logic       ready
-  );
+);
 
 (* ASYNC_REG="true" *)logic button_s;
 logic [5:0] button_reg;
@@ -36,7 +36,7 @@ always_ff @(posedge clk) begin
     running <= ~running;
   end
 end
-  
+
   logic _10_ms;
   logic _100_ms;
   logic _1s;
@@ -44,22 +44,25 @@ end
   logic _1m;
   logic _10m;
   logic _1h;
-  logic _10h;  
+  logic _10h;
   logic [7:0][3:0] crono;
-  counter #(.LIMIT(999999)) ten_ms (.clk(clk), .rst(rst), .enable(running), .count(),    .tc(_10_ms));
-  counter #(.LIMIT(9)) cent_s (.clk(clk), .rst(rst), .enable(_10_ms),  .count(crono[0]), .tc(_100_ms));
-  counter #(.LIMIT(9)) dec_s  (.clk(clk), .rst(rst), .enable(_100_ms), .count(crono[1]), .tc(_1s));
-  counter #(.LIMIT(9)) sec    (.clk(clk), .rst(rst), .enable(_1s),     .count(crono[2]), .tc(_10s));
-  counter #(.LIMIT(5)) d_sec  (.clk(clk), .rst(rst), .enable(_10s),    .count(crono[3]), .tc(_1m));
-  counter #(.LIMIT(9)) min    (.clk(clk), .rst(rst), .enable(_1m),     .count(crono[4]), .tc(_10m));
-  counter #(.LIMIT(5)) d_min  (.clk(clk), .rst(rst), .enable(_10m),    .count(crono[5]), .tc(_1h));
-  counter #(.LIMIT(9)) hour   (.clk(clk), .rst(rst), .enable(_1h),     .count(crono[6]), .tc(_10h));
-  counter #(.LIMIT(9)) d_hour (.clk(clk), .rst(rst), .enable(_10h),    .count(crono[7]), .tc());
+  counter #(.LIMIT(999999)) ten_ms (.clk(clk), .rst(rst), .enable(running), .count(        ), .tc(_10_ms ));
+  counter #(.LIMIT(9))      cent_s (.clk(clk), .rst(rst), .enable(_10_ms ), .count(crono[0]), .tc(_100_ms));
+  counter #(.LIMIT(9))      dec_s  (.clk(clk), .rst(rst), .enable(_100_ms), .count(crono[1]), .tc(_1s    ));
+  counter #(.LIMIT(9))      sec    (.clk(clk), .rst(rst), .enable(_1s    ), .count(crono[2]), .tc(_10s   ));
+  counter #(.LIMIT(5))      d_sec  (.clk(clk), .rst(rst), .enable(_10s   ), .count(crono[3][2:0]), .tc(_1m    ));
+  assign crono[3][3] = 1'b0;
+  counter #(.LIMIT(9))      min    (.clk(clk), .rst(rst), .enable(_1m    ), .count(crono[4]), .tc(_10m   ));
+  counter #(.LIMIT(5))      d_min  (.clk(clk), .rst(rst), .enable(_10m   ), .count(crono[5][2:0]), .tc(_1h    ));
+  assign crono[5][3] = 1'b0;
+  counter #(.LIMIT(9))      hour   (.clk(clk), .rst(rst), .enable(_1h    ), .count(crono[6]), .tc(_10h   ));
+  counter #(.LIMIT(9))      d_hour (.clk(clk), .rst(rst), .enable(_10h   ), .count(crono[7]), .tc(       ));
 
 
   display_ctrl display_ctrl (
     .clk(clk)
   , .rst(rst)
+  , .dot(8'b0101_0100)
   , .value(crono)
   , .seg(seg)
   , .dsp(dsp)

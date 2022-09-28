@@ -4,6 +4,7 @@
 *.hxx
 *.o
 .*.swp
+core*
 tata/
 tata*
 titi/
@@ -17,3 +18,5 @@ xsc.*
 xsim_*
 xsim.*
 xvlog.*
+vivado*
+vivado_*/*

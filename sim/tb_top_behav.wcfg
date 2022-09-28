@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="366455000fs"></ZoomStartTime>
+      <ZoomEndTime time="4698366455001fs"></ZoomEndTime>
+      <Cursor1Time time="442366455000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="337"></NameColumnWidth>
+      <ValueColumnWidth column_width="166"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="28" />
+   <wvobject type="logic" fp_name="/tb_top/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/button">
+      <obj_property name="ElementShortName">button</obj_property>
+      <obj_property name="ObjectShortName">button</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/dsp">
+      <obj_property name="ElementShortName">dsp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dsp[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/seg">
+      <obj_property name="ElementShortName">seg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">seg[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/running">
+      <obj_property name="ElementShortName">running</obj_property>
+      <obj_property name="ObjectShortName">running</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/power_on">
+      <obj_property name="ElementShortName">power_on</obj_property>
+      <obj_property name="ObjectShortName">power_on</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider20" type="divider">
+      <obj_property name="label">TOP internal signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/top/button_reg">
+      <obj_property name="ElementShortName">button_reg[5:0]</obj_property>
+      <obj_property name="ObjectShortName">button_reg[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/top/button_released">
+      <obj_property name="ElementShortName">button_released</obj_property>
+      <obj_property name="ObjectShortName">button_released</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/top/_10_ms">
+      <obj_property name="ElementShortName">_10_ms</obj_property>
+      <obj_property name="ObjectShortName">_10_ms</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/top/_100_ms">
+      <obj_property name="ElementShortName">_100_ms</obj_property>
+      <obj_property name="ObjectShortName">_100_ms</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/top/_1s">
+      <obj_property name="ElementShortName">_1s</obj_property>
+      <obj_property name="ObjectShortName">_1s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/top/_10s">
+      <obj_property name="ElementShortName">_10s</obj_property>
+      <obj_property name="ObjectShortName">_10s</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/top/_1m">
+      <obj_property name="ElementShortName">_1m</obj_property>
+      <obj_property name="ObjectShortName">_1m</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/top/_10m">
+      <obj_property name="ElementShortName">_10m</obj_property>
+      <obj_property name="ObjectShortName">_10m</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/top/_1h">
+      <obj_property name="ElementShortName">_1h</obj_property>
+      <obj_property name="ObjectShortName">_1h</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/top/_10h">
+      <obj_property name="ElementShortName">_10h</obj_property>
+      <obj_property name="ObjectShortName">_10h</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/top/crono">
+      <obj_property name="ElementShortName">crono[7:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">crono[7:0][3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="divider21" type="divider">
+      <obj_property name="label">Display_ctrl internal signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/top/display_ctrl/dot">
+      <obj_property name="ElementShortName">dot[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dot[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/top/display_ctrl/value">
+      <obj_property name="ElementShortName">value[7:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">value[7:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/top/display_ctrl/seg">
+      <obj_property name="ElementShortName">seg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">seg[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/top/display_ctrl/dsp">
+      <obj_property name="ElementShortName">dsp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dsp[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/top/display_ctrl/delay">
+      <obj_property name="ElementShortName">delay[16:0]</obj_property>
+      <obj_property name="ObjectShortName">delay[16:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/top/display_ctrl/index">
+      <obj_property name="ElementShortName">index[2:0]</obj_property>
+      <obj_property name="ObjectShortName">index[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/top/display_ctrl/update">
+      <obj_property name="ElementShortName">update</obj_property>
+      <obj_property name="ObjectShortName">update</obj_property>
+   </wvobject>
+</wave_config>
