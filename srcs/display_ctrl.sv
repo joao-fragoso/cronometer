@@ -40,7 +40,7 @@ always_ff @(posedge clk) begin
     delay <= 'd0;
     index <= 'd0;
     seg   <= '1;
-    dsp   <= 8'b1000_0000;
+    dsp   <= 8'b0111_1111;
     update <= 1'b1;
   end else begin
     {update,delay} <= delay + 16'd01;
